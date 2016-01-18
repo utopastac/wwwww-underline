@@ -1,0 +1,83 @@
+#header-main
+  width: 100%
+  height: 80vh
+  background: $grey-light
+  text-align: center
+  position: relative
+
+  h1
+    @extend .display-3
+
+  > div:not(.content)
+    background-image: url(../images/piano-cat.jpg)
+    background-position: center center
+    background-size: cover
+    @include positioner(absolute, 0, 0, 0, 0)
+
+  .content
+    @include positioner(absolute, auto, 0, 5rem, 0)
+
+.content-block
+  padding: 7rem 0
+
+  text-align: center
+
+  h1, h2, h3, h4, h5, h6, p
+    max-width: 50rem
+    margin: 0 auto
+
+#photos
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  height: 50rem
+
+  > div
+    //background-image: url(../images/product.jpeg)
+    background-position: center center
+    background-size: cover
+    
+
+    &:first-child
+      height: 50rem
+      width: 50%
+      background-color: rosybrown
+      background-image: url(../images/wall-angle.jpg)
+
+    &:nth-child(2)
+      width: 30%
+      height: 35rem
+      background-color: peachpuff
+      background-image: url(../images/single-book.jpg)
+
+    &:nth-child(3)
+      width: 30%
+      height: 15rem
+      background-color: sandybrown
+      background-image: url(../images/cat-closeup.jpg)
+
+    &:nth-child(4)
+      width: 20%
+      height: 15rem
+      background-color: tomato
+      background-image: url(../images/page-closeup.jpg)
+
+    &:nth-child(5)
+      width: 20%
+      height: 35rem
+      background-color: lemonchiffon
+      background-image: url(../images/desk-closeup.jpg)
+
+#products
+
+  padding: 8rem 0
+  
+  ul
+    display: flex
+
+  li
+    margin: 0 2rem
+    text-align: center
+
+    img
+      width: 100%

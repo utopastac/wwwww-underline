@@ -1,0 +1,25 @@
+@mixin active-state
+  &:active:not(.active)
+    background: $cta-colour
+    color: white
+    p, h1, h2, h3, h4, h5, h6
+      color: white
+
+    &:after
+      background-color: white
+
+@mixin background-svg-icon($wt, $ht, $icon, $colour: black)
+  width: $wt
+  height: $ht
+  position: relative
+
+  &:after
+    display: block
+    content: ""
+    @include positioner()
+    width: $wt
+    height: $ht
+    
+    background-color: $colour
+    -webkit-mask: url($icon) no-repeat
+    mask: url($icon) no-repeat

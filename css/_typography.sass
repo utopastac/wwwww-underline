@@ -1,0 +1,107 @@
+@mixin text-link
+  a
+    color: black
+    text-decoration: underline
+
+.light
+  font-weight: 300
+
+.regular
+  font-weight: 400
+
+.bold
+  font-weight: 700
+
+.display-4, .display-3, .display-2, .display-1
+  @extend .light
+
+.display-4
+  font-size: 8.2rem
+
+.display-3
+  font-size: 5.6rem
+
+.display-2
+  font-size: 4.5rem
+  line-height: 1
+
+.display-1
+  font-size: 3.4rem
+
+.display-0
+  font-size: 3rem
+
+.headline
+  font-size: 2.4rem
+
+.title
+  font-size: 2rem
+
+.subhead
+  font-size: 1.6rem
+  line-height: 2.3rem 
+
+.body
+  font-size: 1.4rem
+
+.caption
+  font-size: 1.2rem
+
+.caps
+  text-transform: uppercase
+
+html
+  font-size: 62.5%
+
+body
+  font-family: "sofia-pro-soft", sans-serif
+  .regular
+  -webkit-font-smoothing: antialiased
+  color: black
+
+p, .copy
+  margin: 0
+  text-transform: none
+  @extend .body
+  @include text-link
+  line-height: 2.4rem
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+
+h1, .h1
+  @extend .display-0
+  @extend .regular
+
+h2, .h2
+  @extend .headline
+  @extend .regular
+
+h3, .h3
+  @extend .title
+  @extend .regular
+
+h4, .h4
+  @extend .subhead
+  @extend .regular
+
+h5, .h5
+  @extend .body
+  @extend .bold
+
+h6, .h6
+  @extend .caption
+  @extend .caps
+  @extend .regular
+  color: $grey-medium
+
+i
+
+a
+  cursor: pointer
+  text-decoration: underline
+  color: black
+  &:visited
+    color: inherit
+
+

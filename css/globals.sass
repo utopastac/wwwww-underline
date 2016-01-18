@@ -1,0 +1,55 @@
+//screen sizes
+$screen-sm-min: 500px
+$screen-md-min: 750px
+$screen-lg-min: 1050px
+
+//Reset
+@import "normalise"
+//General
+@import "utilz"
+@import "mixins"
+@import "variables"
+@import "typography"
+@import "layout"
+@import "buttons"
+@import "forms"
+//Styleguide
+@import "global_nav"
+@import "global_footer"
+
+
+@include min($screen-sm-min)  
+  
+
+@include min($screen-md-min)  
+  
+
+@include min($screen-lg-min)  
+  
+
+*, *:before, *:after
+  box-sizing: border-box
+
+ul
+  margin: 0
+  padding: 0
+
+li
+  list-style-type: none
+
+html
+  //overflow-x: hidden
+
+body
+  padding: 0 0 $space-60
+  position: static
+  overflow-y: auto
+  width: 100%
+
+#content-main
+
+.wrapper
+  width: 90%
+  max-width: 120rem
+  margin: 0 auto
+
